@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бакалаврська робота | Головна сторінка</title>
+    <title>Назва Бакалаврської роботи (UA/EN) | Назва Університету</title>
     <meta name="description"
-        content="Лендінг сторінка бакалаврської роботи: цілі, завдання, результати та актуальність.">
+        content="Короткий опис бакалаврської роботи (до 300 символів), який розкриває основну суть та напрямок дослідження.">
+    <meta name="keywords"
+        content="Ключові слова, Ключове слово 1, Ключове слово 2, Ключове слово 3, Бакалаврська робота">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Бакалаврська робота | Головна сторінка">
+    <meta property="og:title" content="Назва Бакалаврської роботи (UA/EN) | Назва Університету">
     <meta property="og:description"
-        content="Лендінг сторінка бакалаврської роботи: цілі, завдання, результати та актуальність.">
+        content="Короткий опис бакалаврської роботи (до 300 символів), який розкриває основну суть та напрямок дослідження.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourdomain.com/">
     <meta property="og:image" content="https://yourdomain.com/assets/img/research-object.jpg">
@@ -53,6 +55,34 @@
             padding: 0.5rem;
             z-index: 1000;
         }
+
+        /* Додаткові базові стилі для тимчасової читабельності без основного CSS файлу */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        figure {
+            margin: 1.5rem 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        address {
+            font-style: normal;
+            margin-top: 1rem;
+        }
     </style>
 
     <!-- Schema.org JSON-LD -->
@@ -60,17 +90,17 @@
     {
       "@context": "https://schema.org",
       "@type": "ScholarlyArticle",
-      "headline": "Тема Бакалаврської Роботи",
+      "headline": "Назва Бакалаврської роботи (UA/EN)",
       "author": {
         "@type": "Person",
         "name": "[ПІБ Студента]"
       },
-      "description": "Лендінг сторінка бакалаврської роботи: цілі, завдання, результати та актуальність.",
+      "description": "Короткий опис бакалаврської роботи (до 300 символів), який розкриває основну суть та напрямок дослідження.",
       "image": "https://yourdomain.com/assets/img/research-object.jpg",
       "inLanguage": "uk",
       "publisher": {
         "@type": "Organization",
-        "name": "Назва Університету",
+        "name": "[Назва Університету]",
         "logo": {
           "@type": "ImageObject",
           "url": "https://yourdomain.com/assets/img/university-logo.png"
@@ -84,49 +114,89 @@
     <a href="#main-content" class="sr-only">Перейти до основного контенту</a>
 
     <header>
-        <img src="assets/img/university-logo.png" alt="Логотип Університету" width="150" height="auto">
-        <h1>Тема Бакалаврської Роботи</h1>
-        <p>Студент: [ПІБ Студента]</p>
+        <img src="assets/img/university-logo.png" alt="Логотип Університету (Назва Університету)" width="150"
+            height="auto">
+        <p><strong>[Назва Університету]</strong></p>
+
+        <h1>[Назва Бакалаврської роботи (UA/EN)]</h1>
+        <p><em>Студент:</em> [ПІБ Студента]</p>
+
+        <p><strong>Короткий опис:</strong> [Текст-заповнювач: Короткий опис бакалаврської роботи до 300 символів, який
+            розкриває предметну область, ключову проблему та пропоноване рішення].</p>
+
+        <p><strong>Ключові слова:</strong> <em>[Ключове слово 1], [Ключове слово 2], [Ключове слово 3], [Ключове слово
+                4]</em></p>
+
         <nav aria-label="Головна навігація">
             <ul>
-                <li><a href="#about">Про роботу</a></li>
-                <li><a href="#results">Результати</a></li>
+                <li><a href="#about">Про дослідження</a></li>
+                <li><a href="#methodology">Методологія</a></li>
+                <li><a href="#results">Очікувані результати</a></li>
+                <li><a href="#contacts">Контакти</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
         <section id="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">Про бакалаврську роботу</h2>
+            <h2 id="about-heading">Про дослідження</h2>
 
-            <img src="assets/img/research-object.jpg"
-                alt="Візуалізація об'єкта дослідження: графік або схема залежностей" width="800" height="auto">
+            <figure>
+                <img src="assets/img/research-object.jpg"
+                    alt="Візуалізація об'єкта дослідження: графік, 3D-модель або схема залежностей продукту" width="800"
+                    height="auto">
+                <figcaption>Рис. 1. Узагальнене подання об'єкта дослідження</figcaption>
+            </figure>
 
-            <article aria-labelledby="relevance-heading">
-                <h3 id="relevance-heading">Актуальність</h3>
-                <p>Текст про актуальність теми дослідження...</p>
-            </article>
             <article aria-labelledby="goals-heading">
-                <h3 id="goals-heading">Мета та завдання</h3>
-                <p>Метою роботи є... Для досягнення мети були поставлені такі завдання:</p>
+                <h3 id="goals-heading">Мета дослідження</h3>
+                <p>[Текст-заповнювач: Метою дослідження є розробка інноваційного методу/системи/програми для вирішення
+                    актуальної проблеми у вибраній сфері...]</p>
+
+                <h4>Основні завдання:</h4>
                 <ul>
-                    <li>Завдання 1</li>
-                    <li>Завдання 2</li>
-                    <li>Завдання 3</li>
+                    <li><strong>Завдання 1:</strong> Провести огляд існуючих літературних джерел та аналогічних
+                        програмних або апаратних рішень.</li>
+                    <li><strong>Завдання 2:</strong> Сформулювати математичну модель / архітектуру запропонованої
+                        системи.</li>
+                    <li><strong>Завдання 3:</strong> Розробити програмний / апаратний прототип запропонованої системи чи
+                        застосунку.</li>
+                    <li><strong>Завдання 4:</strong> Провести верифікацію та тестування прототипу, зібрати метрики
+                        ефективності.</li>
+                    <li><strong>Завдання 5:</strong> Проаналізувати отримані результати дослідження та зробити висновки
+                        щодо їх практичного застосування.</li>
                 </ul>
             </article>
         </section>
 
+        <section id="methodology" aria-labelledby="methodology-heading">
+            <h2 id="methodology-heading">Методологія</h2>
+            <p>[Текст-заповнювач: В ході дослідження використовуються такі методи наукового пізнання: математичне
+                моделювання, статистичний аналіз, експериментальне тестування, об'єктно-орієнтоване проектування. Для
+                розробки програмної частини застосовувався стек технологій...]</p>
+        </section>
+
         <section id="results" aria-labelledby="results-heading">
-            <h2 id="results-heading">Отримані результати</h2>
+            <h2 id="results-heading">Очікувані результати</h2>
             <article aria-labelledby="practical-heading">
                 <h3 id="practical-heading">Практичне значення</h3>
-                <p>Опис практичного значення отриманих результатів...</p>
+                <p>[Текст-заповнювач: Очікується, що впровадження запропонованої архітектури дозволить підвищити
+                    швидкодію обробки даних на 20%. Практична цінність полягає в можливості використання отриманого
+                    продукту в реальних умовах організацій...]</p>
             </article>
         </section>
     </main>
 
-    <footer aria-label="Підвал сайту з авторськими правами">
+    <footer id="contacts" aria-label="Підвал сайту з авторськими правами та контактами">
+        <h2 id="contacts-heading">Контактна інформація</h2>
+        <address aria-labelledby="contacts-heading">
+            <p><strong>Студент/Автор:</strong> [ПІБ Студента]</p>
+            <p><strong>Науковий керівник:</strong> [Науковий ступінь, звання, ПІБ Керівника]</p>
+            <p><strong>Університет:</strong> [Назва Університету, Кафедра, Факультет]</p>
+            <p><strong>Email:</strong> <a href="mailto:student@university.edu.ua">student@university.edu.ua</a></p>
+            <p><strong>Репозиторій коду (GitHub):</strong> <a href="https://github.com/your-username/repository-name"
+                    target="_blank" rel="noopener noreferrer">github.com/your-username/repository-name</a></p>
+        </address>
         <p>&copy; 2026 Всі права захищено. Створено для бакалаврської роботи.</p>
     </footer>
 </body>
