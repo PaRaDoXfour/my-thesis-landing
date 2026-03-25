@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бакалаврська робота | Головна сторінка</title>
-    <meta name="description" content="Лендінг сторінка бакалаврської роботи: цілі, завдання, результати та актуальність.">
+    <meta name="description"
+        content="Лендінг сторінка бакалаврської роботи: цілі, завдання, результати та актуальність.">
+
+    <!-- Open Graph Meta Tags (для соцмереж) -->
+    <meta property="og:title" content="Бакалаврська робота | Головна сторінка">
+    <meta property="og:description"
+        content="Лендінг сторінка бакалаврської роботи: цілі, завдання, результати та актуальність.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="https://yourdomain.com/assets/img/og-image.jpg">
+    <meta property="og:image:alt" content="Обкладинка бакалаврської роботи">
+    <meta property="og:locale" content="uk_UA">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Бакалаврська робота | Головна сторінка">
+    <meta name="twitter:description"
+        content="Лендінг сторінка бакалаврської роботи: цілі, завдання, результати та актуальність.">
+    <meta name="twitter:image" content="https://yourdomain.com/assets/img/og-image.jpg">
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
@@ -16,12 +35,56 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "name": "Тема Бакалаврської Роботи",
+      "author": {
+        "@type": "Person",
+        "name": "[ПІБ Студента]"
+      },
+      "headline": "Тема Бакалаврської Роботи",
+      "description": "Аналіз, розробка та впровадження рішень в межах бакалаврського дослідження.",
+      "inLanguage": "uk-UA",
+      "url": "https://yourdomain.com/",
+      "image": "https://yourdomain.com/assets/img/og-image.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "[Назва Університету]"
+      }
+    }
+    </script>
+
+    <style>
+        /* Стиль для посилання "Перейти до контенту" (доступність для клавіатури/скрінрідерів) */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
+    <!-- Доступність: Посилання для пропуску навігації -->
+    <a href="#main-content" class="skip-link">Перейти до основного контенту</a>
+
+    <header role="banner">
         <h1>Тема Бакалаврської Роботи</h1>
         <p>Студент: [ПІБ Студента]</p>
-        <nav>
+        <nav aria-label="Головна навігація" role="navigation">
             <ul>
                 <li><a href="#about">Про роботу</a></li>
                 <li><a href="#results">Результати</a></li>
@@ -29,12 +92,19 @@
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>Про бакалаврську роботу</h2>
+    <main id="main-content" role="main">
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Про бакалаврську роботу</h2>
             <article>
                 <h3>Актуальність</h3>
                 <p>Текст про актуальність теми дослідження...</p>
+                <!-- Приклад зображення з alt текстом -->
+                <figure>
+                    <img src="assets/img/placeholder-relevance.jpg"
+                        alt="Діаграма, що демонструє актуальність проблеми в сучасних умовах" loading="lazy" width="800"
+                        height="400">
+                    <figcaption>Рис. 1. Актуальність дослідження</figcaption>
+                </figure>
             </article>
             <article>
                 <h3>Мета та завдання</h3>
@@ -47,17 +117,36 @@
             </article>
         </section>
 
-        <section id="results">
-            <h2>Отримані результати</h2>
+        <section id="results" aria-labelledby="results-heading">
+            <h2 id="results-heading">Отримані результати</h2>
             <article>
                 <h3>Практичне значення</h3>
                 <p>Опис практичного значення отриманих результатів...</p>
+                <figure>
+                    <img src="assets/img/placeholder-results.jpg"
+                        alt="Графік порівняння результатів до та після впровадження розробленої системи" loading="lazy"
+                        width="800" height="400">
+                    <figcaption>Рис. 2. Практичні результати</figcaption>
+                </figure>
+
+                <!-- Приклад інтерактивного елемента з ARIA -->
+                <div role="button" tabindex="0" aria-pressed="false" aria-label="Ознайомитись детальніше з результатами"
+                    onclick="alert('Інтерактивний елемент натиснуто')"
+                    onkeypress="if(event.key==='Enter') alert('Інтерактивний елемент натиснуто');"
+                    style="display:inline-block; margin-top:10px; padding:10px 20px; background:#e0e0e0; border-radius:4px; cursor:pointer;">
+                    Детальніше про результати
+                </div>
             </article>
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; 2026 Всі права захищено. Створено для бакалаврської роботи.</p>
+        <address>
+            <p>Контактна інформація: <a href="mailto:email@example.com"
+                    aria-label="Написати листа автору">email@example.com</a></p>
+        </address>
     </footer>
 </body>
+
 </html>
