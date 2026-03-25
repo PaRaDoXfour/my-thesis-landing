@@ -29,61 +29,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-
-    <style>
-        /* Стилі для доступності: прихований текст, який з'являється при фокусуванні (tab) */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        .sr-only:focus {
-            position: static;
-            width: auto;
-            height: auto;
-            clip: auto;
-            white-space: normal;
-            background-color: #000;
-            color: #fff;
-            padding: 0.5rem;
-            z-index: 1000;
-        }
-
-        /* Додаткові базові стилі для тимчасової читабельності без основного CSS файлу */
-        body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        section {
-            margin-bottom: 2.5rem;
-        }
-
-        figure {
-            margin: 1.5rem 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        address {
-            font-style: normal;
-            margin-top: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
@@ -113,21 +59,27 @@
 <body>
     <a href="#main-content" class="sr-only">Перейти до основного контенту</a>
 
-    <header>
-        <img src="assets/img/university-logo.png" alt="Логотип Університету (Назва Університету)" width="150"
-            height="auto">
-        <p><strong>[Назва Університету]</strong></p>
+    <header class="main-header">
+        <div class="header-logo-container">
+            <picture>
+                <source srcset="assets/img/university-logo.webp" type="image/webp">
+                <img class="logo" src="assets/img/university-logo.png" alt="Логотип Університету (Назва Університету)"
+                    width="150" height="auto">
+            </picture>
+            <p class="university-name"><strong>[Назва Університету]</strong></p>
+        </div>
 
-        <h1>[Назва Бакалаврської роботи (UA/EN)]</h1>
-        <p><em>Студент:</em> [ПІБ Студента]</p>
+        <div class="header-content">
+            <h1 class="thesis-title">[Назва Бакалаврської роботи (UA/EN)]</h1>
+            <p><em>Студент:</em> [ПІБ Студента]</p>
 
-        <p><strong>Короткий опис:</strong> [Текст-заповнювач: Короткий опис бакалаврської роботи до 300 символів, який
-            розкриває предметну область, ключову проблему та пропоноване рішення].</p>
+            <p><strong>Короткий опис:</strong> [Текст-заповнювач: Короткий опис бакалаврської роботи до 300 символів,
+                який розкриває предметну область, ключову проблему та пропоноване рішення].</p>
+            <p><strong>Ключові слова:</strong> <em>[Ключове слово 1], [Ключове слово 2], [Ключове слово 3], [Ключове
+                    слово 4]</em></p>
+        </div>
 
-        <p><strong>Ключові слова:</strong> <em>[Ключове слово 1], [Ключове слово 2], [Ключове слово 3], [Ключове слово
-                4]</em></p>
-
-        <nav aria-label="Головна навігація">
+        <nav aria-label="Головна навігація" class="main-nav">
             <ul>
                 <li><a href="#about">Про дослідження</a></li>
                 <li><a href="#methodology">Методологія</a></li>
@@ -137,59 +89,68 @@
         </nav>
     </header>
 
-    <main id="main-content">
-        <section id="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">Про дослідження</h2>
+    <main id="main-content" class="main-content">
+        <section id="about" aria-labelledby="about-heading" class="section-card">
+            <h2 id="about-heading" class="section-title">Про дослідження</h2>
 
-            <figure>
-                <img src="assets/img/research-object.jpg"
-                    alt="Візуалізація об'єкта дослідження: графік, 3D-модель або схема залежностей продукту" width="800"
-                    height="auto">
-                <figcaption>Рис. 1. Узагальнене подання об'єкта дослідження</figcaption>
-            </figure>
+            <div class="about-layout">
+                <figure class="research-visual">
+                    <picture>
+                        <source srcset="assets/img/research-object.webp" type="image/webp">
+                        <img src="assets/img/research-object.jpg"
+                            alt="Візуалізація об'єкта дослідження: графік, 3D-модель або схема залежностей продукту"
+                            width="800" height="auto">
+                    </picture>
+                    <figcaption>Рис. 1. Узагальнене подання об'єкта дослідження</figcaption>
+                </figure>
 
-            <article aria-labelledby="goals-heading">
-                <h3 id="goals-heading">Мета дослідження</h3>
-                <p>[Текст-заповнювач: Метою дослідження є розробка інноваційного методу/системи/програми для вирішення
-                    актуальної проблеми у вибраній сфері...]</p>
+                <div class="about-text">
+                    <article aria-labelledby="goals-heading">
+                        <h3 id="goals-heading">Мета дослідження</h3>
+                        <p>[Текст-заповнювач: Метою дослідження є розробка інноваційного методу/системи/програми для
+                            вирішення актуальної проблеми у вибраній сфері...]</p>
 
-                <h4>Основні завдання:</h4>
-                <ul>
-                    <li><strong>Завдання 1:</strong> Провести огляд існуючих літературних джерел та аналогічних
-                        програмних або апаратних рішень.</li>
-                    <li><strong>Завдання 2:</strong> Сформулювати математичну модель / архітектуру запропонованої
-                        системи.</li>
-                    <li><strong>Завдання 3:</strong> Розробити програмний / апаратний прототип запропонованої системи чи
-                        застосунку.</li>
-                    <li><strong>Завдання 4:</strong> Провести верифікацію та тестування прототипу, зібрати метрики
-                        ефективності.</li>
-                    <li><strong>Завдання 5:</strong> Проаналізувати отримані результати дослідження та зробити висновки
-                        щодо їх практичного застосування.</li>
-                </ul>
-            </article>
+                        <h4>Основні завдання:</h4>
+                        <ul class="tasks-list">
+                            <li><strong>Завдання 1:</strong> Провести огляд існуючих літературних джерел та аналогічних
+                                програмних або апаратних рішень.</li>
+                            <li><strong>Завдання 2:</strong> Сформулювати математичну модель / архітектуру
+                                запропонованої системи.</li>
+                            <li><strong>Завдання 3:</strong> Розробити програмний / апаратний прототип запропонованої
+                                системи чи застосунку.</li>
+                            <li><strong>Завдання 4:</strong> Провести верифікацію та тестування прототипу, зібрати
+                                метрики ефективності.</li>
+                            <li><strong>Завдання 5:</strong> Проаналізувати отримані результати дослідження та зробити
+                                висновки щодо їх практичного застосування.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section id="methodology" aria-labelledby="methodology-heading">
-            <h2 id="methodology-heading">Методологія</h2>
-            <p>[Текст-заповнювач: В ході дослідження використовуються такі методи наукового пізнання: математичне
-                моделювання, статистичний аналіз, експериментальне тестування, об'єктно-орієнтоване проектування. Для
-                розробки програмної частини застосовувався стек технологій...]</p>
-        </section>
+        <div class="grid-layout">
+            <section id="methodology" aria-labelledby="methodology-heading" class="section-card">
+                <h2 id="methodology-heading" class="section-title">Методологія</h2>
+                <p>[Текст-заповнювач: В ході дослідження використовуються такі методи наукового пізнання: математичне
+                    моделювання, статистичний аналіз, експериментальне тестування, об'єктно-орієнтоване проектування.
+                    Для розробки програмної частини застосовувався стек технологій...]</p>
+            </section>
 
-        <section id="results" aria-labelledby="results-heading">
-            <h2 id="results-heading">Очікувані результати</h2>
-            <article aria-labelledby="practical-heading">
-                <h3 id="practical-heading">Практичне значення</h3>
-                <p>[Текст-заповнювач: Очікується, що впровадження запропонованої архітектури дозволить підвищити
-                    швидкодію обробки даних на 20%. Практична цінність полягає в можливості використання отриманого
-                    продукту в реальних умовах організацій...]</p>
-            </article>
-        </section>
+            <section id="results" aria-labelledby="results-heading" class="section-card">
+                <h2 id="results-heading" class="section-title">Очікувані результати</h2>
+                <article aria-labelledby="practical-heading">
+                    <h3 id="practical-heading">Практичне значення</h3>
+                    <p>[Текст-заповнювач: Очікується, що впровадження запропонованої архітектури дозволить підвищити
+                        швидкодію обробки даних на 20%. Практична цінність полягає в можливості використання отриманого
+                        продукту в реальних умовах організацій...]</p>
+                </article>
+            </section>
+        </div>
     </main>
 
-    <footer id="contacts" aria-label="Підвал сайту з авторськими правами та контактами">
+    <footer id="contacts" aria-label="Підвал сайту з авторськими правами та контактами" class="main-footer">
         <h2 id="contacts-heading">Контактна інформація</h2>
-        <address aria-labelledby="contacts-heading">
+        <address aria-labelledby="contacts-heading" class="footer-address">
             <p><strong>Студент/Автор:</strong> [ПІБ Студента]</p>
             <p><strong>Науковий керівник:</strong> [Науковий ступінь, звання, ПІБ Керівника]</p>
             <p><strong>Університет:</strong> [Назва Університету, Кафедра, Факультет]</p>
@@ -197,7 +158,7 @@
             <p><strong>Репозиторій коду (GitHub):</strong> <a href="https://github.com/your-username/repository-name"
                     target="_blank" rel="noopener noreferrer">github.com/your-username/repository-name</a></p>
         </address>
-        <p>&copy; 2026 Всі права захищено. Створено для бакалаврської роботи.</p>
+        <p class="copyright">&copy; 2026 Всі права захищено. Створено для бакалаврської роботи.</p>
     </footer>
 </body>
 
